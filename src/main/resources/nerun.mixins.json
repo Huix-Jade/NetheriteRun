@@ -1,0 +1,20 @@
+{
+  "compatibilityLevel": "JAVA_17",
+  "package": "huix.netherite_run.mixins",
+  "required": true,
+  "target": "DEFAULT",
+  "minVersion": "0.8.3",
+  "mixins": [
+    "block.tileentity.TileEntityFurnaceMixin",
+    "entity.EntityLivingBaseMixin",
+    "entity.player.ClientPlayerMixin",
+    "entity.player.EntityPlayerMixin",
+    "entity.player.ServerPlayerMixin",
+    "item.ItemArmorMixin",
+    "item.ItemMixin",
+    "item.ItemNuggetMixin",
+    "item.ItemToolMixin",
+    "network.Packet100OpenWindowMixin",
+    "world.ChunkProviderHellMixin"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "netherite_run",
+  "version": "${version}",
+  "name": "NetheriteRun",
+  "description": "Netherite respawn!",
+  "authors": ["Huix"],
+  "entrypoints": {
+    "preLaunch": ["huix.netherite_run.EarlyRiser"],
+    "main": ["huix.netherite_run.Start"]
+  },
+  "depends": {
+    "fishmodloader": ">=3.3.0"
+  },
+  "environment": "*",
+  "mixins": [
+    "nerun.mixins.json"
+  ],
+  "accessWidener": "nerun.accesswidener",
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/EntityPlayer": ["huix/netherite_run/injected_interfaces/IPlayer"]
+    }
+  }
+}
+
