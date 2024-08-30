@@ -6,7 +6,7 @@ item.netherite_battle_axe.name=下界合金战斧
 item.netherite_chestplate.name=下界合金胸甲
 item.netherite_dagger.name=下界合金匕首
 item.netherite_boots.name=下界合金鞋
-item.netherite_helmet.name=下界合金碎头盔
+item.netherite_helmet.name=下界合金头盔
 item.netherite_leggings.name=下界合金护腿
 item.netherite_pickaxe.name=下界合金镐
 item.netherite_sword.name=下界合金剑
@@ -16,12 +16,22 @@ item.netherite_shears.name=下界合金剪刀
 item.netherite_mattock.name=下界合金鹤嘴锄
 item.netherite_hoe.name=下界合金锄
 item.netherite_hatchet.name=下界合金手斧
+item.netherite_coin.name=下界合金币
+item.netherite_fish_rod.name=下界合金钓鱼竿
+item.netherite_arrow.name=下界合金箭
+item.netherite_bow.name=下界合金弓
+
+material.netherite.name=下界合金
 
 tile.smithing_table.name=锻造台
 tile.ancient_debris.name=远古残骸
 tile.netherite_block.name=下界合金块
 
+
 smithing.update=升级装备
+
+emi.smithing.time=%s秒
+emi.category.netherite.smithing=装备升级
 
 item.tooltip.knockbackBonus=+%s的击退抗性
 

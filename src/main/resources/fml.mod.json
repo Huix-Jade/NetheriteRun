@@ -6,8 +6,9 @@
   "description": "Netherite respawn!",
   "authors": ["Huix"],
   "entrypoints": {
-    "preLaunch": ["huix.netherite_run.EarlyRiser"],
-    "main": ["huix.netherite_run.Start"]
+    "preLaunch": ["huix.netherite_run.init.PreInit"],
+    "main": ["huix.netherite_run.init.PostInit"],
+    "emi": ["huix.netherite_run.init.EMIInit"]
   },
   "depends": {
     "fishmodloader": ">=3.3.0"

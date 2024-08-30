@@ -44,7 +44,13 @@ public class SmithingRecipeManager {
                 new ItemStack(Item.hoeMithril), new ItemStack(NetheriteRunItem.netherite_ingot));
         this.addSmithingRecipe(new ItemStack(NetheriteRunItem.netherite_hatchet),
                 new ItemStack(Item.hatchetMithril), new ItemStack(NetheriteRunItem.netherite_ingot));
+        this.addSmithingRecipe(new ItemStack(NetheriteRunItem.netherite_shears),
+                new ItemStack(Item.shearsMithril), new ItemStack(NetheriteRunItem.netherite_ingot));
 
+        this.addSmithingRecipe(new ItemStack(NetheriteRunItem.netherite_fish_rod),
+                new ItemStack(Item.fishingRodMithril), new ItemStack(NetheriteRunItem.netherite_ingot));
+        this.addSmithingRecipe(new ItemStack(NetheriteRunItem.netherite_bow),
+                new ItemStack(Item.bowMithril), new ItemStack(NetheriteRunItem.netherite_ingot));
     }
 
 

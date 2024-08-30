@@ -35,8 +35,17 @@ public class NetheriteRunItem {
     public static final HoeItem netherite_hoe = new HoeItem(IdUtil.getNextItemID(),  NetheriteRunMaterial.netherite);
     public static final ItemHatchet netherite_hatchet = new HatchetItem(IdUtil.getNextItemID(), NetheriteRunMaterial.netherite);
 
+    public static ItemCoin netherite_coin = new ItemCoin(IdUtil.getNextItemID(), NetheriteRunMaterial.netherite);
+    public static ItemFishingRod netherite_fish_rod = new ItemFishingRod(IdUtil.getNextItemID(), NetheriteRunMaterial.netherite);
+    public static ItemArrow netherite_arrow = new ItemArrow(IdUtil.getNextItemID(), NetheriteRunMaterial.netherite);
+    public static final ItemBow netherite_bow = (ItemBow) new ItemBow(IdUtil.getNextItemID(), NetheriteRunMaterial.netherite).setMaxDamage(256);
 
     public static void registerItems(ItemRegistryEvent register) {
+        register.register("Netherite Run", "netherite_coin", netherite_coin).setLowestCraftingDifficultyToProduce(20.0F);
+        register.register("Netherite Run", "netherite_fish_rod", netherite_fish_rod).setLowestCraftingDifficultyToProduce(20.0F);
+        register.register("Netherite Run", "netherite_arrow", netherite_arrow).setLowestCraftingDifficultyToProduce(40.0F);
+        register.register("Netherite Run", "bows/netherite/", netherite_bow).setUnlocalizedName("netherite_bow").setLowestCraftingDifficultyToProduce(20.0F);
+
         register.register("Netherite Run", "netherite_scrap", netherite_scrap, CreativeTabs.tabMaterials).setLowestCraftingDifficultyToProduce(20.0F);
         register.register("Netherite Run", "netherite_ingot", netherite_ingot);
         register.register("Netherite Run", "netherite_nugget", netherite_nugget);

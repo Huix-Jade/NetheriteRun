@@ -30,9 +30,9 @@ dependencies {
 
 	// FishModLoader API. And I probably want it anyway.
 	implementation files(loom.getFML().toPath())
-//	runtimeOnly(files("libs\\fastutil-8.5.12.jar"))
-//	runtimeOnly(files("libs\\PinIn-Lib-1.6.0.jar"))
-//	runtimeOnly(files("libs\\EMI-1.0.2.jar"))
+	implementation files("libs\\fastutil-8.5.12.jar")
+	implementation files("libs\\PinIn-Lib-1.6.0.jar")
+	implementation files("libs\\EMI-1.0.2.jar")
 }
 
 processResources {
