@@ -1,6 +1,7 @@
 package huix.netherite_run.event;
 
 import com.google.common.eventbus.Subscribe;
+import huix.netherite_run.game_objects.achievement.NetheriteAchievement;
 import huix.netherite_run.game_objects.item.NetheriteRunItem;
 import huix.netherite_run.game_objects.recipe.CraftTableRecipes;
 import huix.netherite_run.game_objects.recipe.SmithingRecipeManager;
@@ -27,7 +28,7 @@ public class NetheriteRunEvents {
 
     @Subscribe
     public void onAchievementRegister(AchievementRegistryEvent event){
-//        Achievements.registerAchievements();
+        NetheriteAchievement.registerAchievements();
     }
 
     @Subscribe

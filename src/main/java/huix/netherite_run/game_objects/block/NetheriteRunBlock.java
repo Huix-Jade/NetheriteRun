@@ -13,6 +13,7 @@ public class NetheriteRunBlock {
     public static Block smithing_table = new SmithingTableBlock().setCreativeTab(CreativeTabs.tabDecorations);
 
     public static Block ancient_debris = new AncientDebrisBlock();
+
     public static final BlockOreStorage netherite_block = new BlockOreStorage(IdUtil.getNextBlockID(), NetheriteRunMaterial.netherite);
 
     public static void registerItemBlocks(ItemRegistryEvent register) {

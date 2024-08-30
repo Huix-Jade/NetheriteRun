@@ -61,7 +61,7 @@ public class SmithingTableTileEntity extends TileEntity implements IInventory {
 
             if (this.getRunnableStacks(this.current_recipe).isEmpty()) {
                 this.build_time++;
-                if (this.build_time == 800) {
+                if (this.build_time == 20) {
                     ItemStack result = this.current_recipe.getRecipeOutput().copy();
                     this.contents[3] = result;
                     this.costItems(this.current_recipe);

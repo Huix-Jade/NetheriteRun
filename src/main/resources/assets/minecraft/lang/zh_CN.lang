@@ -24,3 +24,12 @@ tile.netherite_block.name=下界合金块
 smithing.update=升级装备
 
 item.tooltip.knockbackBonus=+%s的击退抗性
+
+achievement.ancient_debris=深藏不露
+achievement.ancient_debris.desc=在下界挖掘到远古残骸
+achievement.netherite_arroms=残骸裹身
+achievement.netherite_arroms.desc=穿上一整套的下界装备
+achievement.netherite_hoe=终极奉献
+achievement.netherite_hoe.desc=在锻造台中合成下届合金锄
+achievement.netherite_pickaxe=另类的水晶破坏者
+achievement.netherite_pickaxe.desc=在锻造台中合成下届合金镐

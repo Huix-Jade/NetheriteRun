@@ -1,5 +1,6 @@
 package huix.netherite_run.game_objects.block;
 
+import huix.netherite_run.game_objects.achievement.NetheriteAchievement;
 import huix.netherite_run.game_objects.material.NetheriteRunMaterial;
 import net.minecraft.*;
 import net.xiaoyu233.fml.reload.utils.IdUtil;
@@ -15,6 +16,15 @@ public class AncientDebrisBlock extends BlockOre {
         this.setHardness(6.0F);
         this.setResistance(3.0F);
         this.setStepSound(Block.soundStoneFootstep);
+    }
+
+    @Override
+    public int dropBlockAsEntityItem(BlockBreakInfo info) {
+        if (info.wasHarvestedByPlayer()) {
+            info.getResponsiblePlayer().triggerAchievement(NetheriteAchievement.ancient_debris);
+        }
+
+        return super.dropBlockAsEntityItem(info);
     }
 
     @Override
@@ -34,4 +44,5 @@ public class AncientDebrisBlock extends BlockOre {
         this.side_icon = par1IconRegister.registerIcon("ancient_debris_side");
         this.top_icon = par1IconRegister.registerIcon("ancient_debris_top");
     }
+
 }

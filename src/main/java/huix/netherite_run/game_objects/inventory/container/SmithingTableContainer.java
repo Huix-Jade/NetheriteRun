@@ -1,6 +1,7 @@
 package huix.netherite_run.game_objects.inventory.container;
 
 import huix.netherite_run.api.ISmithing;
+import huix.netherite_run.game_objects.inventory.slot.SmithingSlot;
 import huix.netherite_run.game_objects.tileentity.SmithingTableTileEntity;
 import net.minecraft.*;
 
@@ -24,11 +25,7 @@ public class SmithingTableContainer extends Container {
             }
         });
 
-        this.addSlotToContainer(new Slot(smithingTableTile, 3, 98, 48) {
-            public boolean isItemValid(ItemStack par1ItemStack) {
-                return false;
-            }
-        });
+        this.addSlotToContainer(new SmithingSlot(player, smithingTableTile, 3, 98, 48));
 
 
         int i;
@@ -54,7 +51,7 @@ public class SmithingTableContainer extends Container {
     @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
         ItemStack itemstack = null;
-        Slot slot = (Slot)this.inventorySlots.get(index);
+        Slot slot = (Slot) this.inventorySlots.get(index);
         if (slot != null && slot.getHasStack()) {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
@@ -63,30 +60,40 @@ public class SmithingTableContainer extends Container {
                 if (!this.mergeItemStack(itemstack1, slots.length, this.inventorySlots.size(), false)){
                     return null;
                 }
+
+                slot.onSlotChanged();
             } else {
                 if (itemstack1.getItem() instanceof ItemTool || itemstack1.getItem() instanceof ItemArmor){
                     if (!this.mergeItemStack(itemstack1, this.getToolItemSlotIndex(),this.getToolItemSlotIndex() + 1,false)){
                         if (!this.mergeItemStack(itemstack1,0, slots.length,false)){
                             return null;
                         }
+
+                        slot.onSlotChanged();
                     }
                 } else if (itemstack1.getItem() instanceof ISmithing){
                     if (!this.mergeItemStack(itemstack1, this.getSmithingItemSlotIndex(), this.getSmithingItemSlotIndex() + 1,false)){
                         if (!this.mergeItemStack(itemstack1,0, slots.length,false)){
                             return null;
                         }
+
+                        slot.onSlotChanged();
                     }
                 } else {
                     if (!this.mergeItemStack(itemstack1,0, slots.length,false)){
                         return null;
                     }
+
+                    slot.onSlotChanged();
                 }
             }
+
             if (itemstack1.stackSize == 0) {
                 slot.putStack(null);
             } else {
                 slot.onSlotChanged();
             }
+
             if (itemstack1.stackSize == itemstack.stackSize) {
                 return null;
             }
