@@ -1,6 +1,6 @@
 package huix.netherite_run.mixins.world;
 
-import huix.netherite_run.game_objects.block.NetheriteRunBlock;
+import huix.netherite_run.init.RegistryInit;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -20,7 +20,7 @@ public class ChunkProviderHellMixin {
     @Inject(method = "populate", at = @At(value = "INVOKE", target = "Lnet/minecraft/WorldInfo;getEarliestMITEReleaseRunIn()I", ordinal = 1, shift = At.Shift.BEFORE))
     private void injectGenAdamantium(IChunkProvider par1IChunkProvider, int par2, int par3, CallbackInfo ci){
         //vine max
-        WorldGenMinable genMinable = (new WorldGenMinable(NetheriteRunBlock.ancient_debris.blockID, 1, Block.netherrack.blockID)).setMinableBlockMetadata(0);
+        WorldGenMinable genMinable = (new WorldGenMinable(RegistryInit.ancient_debris.blockID, 1, Block.netherrack.blockID)).setMinableBlockMetadata(0);
 
         //chunk max
         int var4 = par2 * 16;

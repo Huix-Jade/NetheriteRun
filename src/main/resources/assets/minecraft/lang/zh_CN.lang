@@ -21,6 +21,8 @@ item.netherite_fish_rod.name=下界合金钓鱼竿
 item.netherite_arrow.name=下界合金箭
 item.netherite_bow.name=下界合金弓
 
+itemGroup.netherite=下界合金
+
 material.netherite.name=下界合金
 
 tile.smithing_table.name=锻造台

@@ -12,7 +12,7 @@ public class SmithingTableBlock extends Block implements ITileEntityProvider {
     private Icon bottom_icon;
     private Icon front_icon;
 
-    protected SmithingTableBlock() {
+    public SmithingTableBlock() {
         super(IdUtil.getNextBlockID(), Material.anvil, new BlockConstants());
         this.setMaxStackSize(1);
         this.setHardness(BlockHardness.planks);

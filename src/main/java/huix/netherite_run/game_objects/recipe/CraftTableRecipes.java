@@ -1,7 +1,6 @@
 package huix.netherite_run.game_objects.recipe;
 
-import huix.netherite_run.game_objects.block.NetheriteRunBlock;
-import huix.netherite_run.game_objects.item.NetheriteRunItem;
+import huix.netherite_run.init.RegistryInit;
 import net.minecraft.Block;
 import net.minecraft.Item;
 import net.minecraft.ItemCoin;
@@ -11,44 +10,44 @@ import net.xiaoyu233.fml.reload.event.RecipeRegistryEvent;
 public class CraftTableRecipes {
 
     public static void registerRecipes(RecipeRegistryEvent register) {
-        register.registerShapedRecipe(new ItemStack(NetheriteRunBlock.smithing_table), false,
+        register.registerShapedRecipe(new ItemStack(RegistryInit.smithing_table), false,
                 "XX",
                 "YY",
                 "YY",
                 'X', Item.ingotAncientMetal,
                 'Y', Block.planks);
 
-        register.registerShapedRecipe(new ItemStack(NetheriteRunItem.netherite_arrow), false,
+        register.registerShapedRecipe(new ItemStack(RegistryInit.netherite_arrow), false,
                 "Z",
                 "X",
                 "Y",
                 'X', Item.stick,
                 'Y', Item.feather,
-                'Z', NetheriteRunItem.netherite_nugget);
+                'Z', RegistryInit.netherite_nugget);
 
-        register.registerShapelessRecipe(new ItemStack(NetheriteRunItem.netherite_nugget),
-                true, NetheriteRunItem.netherite_arrow);
+        register.registerShapelessRecipe(new ItemStack(RegistryInit.netherite_nugget),
+                true, RegistryInit.netherite_arrow);
 
-        register.registerShapelessRecipe(new ItemStack(NetheriteRunItem.netherite_ingot), false,
+        register.registerShapelessRecipe(new ItemStack(RegistryInit.netherite_ingot), false,
                 Item.ingotGold, Item.ingotGold, Item.ingotGold,
-                Item.ingotGold, NetheriteRunItem.netherite_scrap, NetheriteRunItem.netherite_scrap,
-                NetheriteRunItem.netherite_scrap, NetheriteRunItem.netherite_scrap);
+                Item.ingotGold, RegistryInit.netherite_scrap, RegistryInit.netherite_scrap,
+                RegistryInit.netherite_scrap, RegistryInit.netherite_scrap);
 
-        register.registerShapelessRecipe(new ItemStack(NetheriteRunItem.netherite_nugget, 9),
-                true, NetheriteRunItem.netherite_ingot);
+        register.registerShapelessRecipe(new ItemStack(RegistryInit.netherite_nugget, 9),
+                true, RegistryInit.netherite_ingot);
 
-        register.registerShapelessRecipe(new ItemStack(NetheriteRunItem.netherite_ingot),
+        register.registerShapelessRecipe(new ItemStack(RegistryInit.netherite_ingot),
                 true,
-                NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget,
-                NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget,
-                NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget, NetheriteRunItem.netherite_nugget);
+                RegistryInit.netherite_nugget, RegistryInit.netherite_nugget, RegistryInit.netherite_nugget,
+                RegistryInit.netherite_nugget, RegistryInit.netherite_nugget, RegistryInit.netherite_nugget,
+                RegistryInit.netherite_nugget, RegistryInit.netherite_nugget, RegistryInit.netherite_nugget);
 
-        register.registerShapelessRecipe(new ItemStack(NetheriteRunBlock.netherite_block),true,
-                NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot,
-                NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot,
-                NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot, NetheriteRunItem.netherite_ingot);
+        register.registerShapelessRecipe(new ItemStack(RegistryInit.netherite_block),true,
+                RegistryInit.netherite_ingot, RegistryInit.netherite_ingot, RegistryInit.netherite_ingot,
+                RegistryInit.netherite_ingot, RegistryInit.netherite_ingot, RegistryInit.netherite_ingot,
+                RegistryInit.netherite_ingot, RegistryInit.netherite_ingot, RegistryInit.netherite_ingot);
 
-        ItemCoin[] itemCoins = new ItemCoin[] {NetheriteRunItem.netherite_coin};
+        ItemCoin[] itemCoins = new ItemCoin[] {RegistryInit.netherite_coin};
 
         for (ItemCoin coin : itemCoins) {
             for (int i = 1; i <= 9; ++i) {

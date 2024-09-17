@@ -1,8 +1,7 @@
 package huix.netherite_run.game_objects.inventory.slot;
 
-import huix.netherite_run.api.ISmithing;
 import huix.netherite_run.game_objects.achievement.NetheriteAchievement;
-import huix.netherite_run.game_objects.item.NetheriteRunItem;
+import huix.netherite_run.init.RegistryInit;
 import net.minecraft.EntityPlayer;
 import net.minecraft.IInventory;
 import net.minecraft.ItemStack;
@@ -23,11 +22,11 @@ public class SmithingSlot extends Slot {
 
     @Override
     protected void onCrafting(ItemStack par1ItemStack) {
-        if (par1ItemStack.getItem() == NetheriteRunItem.netherite_hoe) {
+        if (par1ItemStack.getItem() == RegistryInit.netherite_hoe) {
             this.thePlayer.addStat(NetheriteAchievement.netherite_hoe, 1);
         }
 
-        if (par1ItemStack.getItem() == NetheriteRunItem.netherite_pickaxe) {
+        if (par1ItemStack.getItem() == RegistryInit.netherite_pickaxe) {
             this.thePlayer.addStat(NetheriteAchievement.netherite_pickaxe, 1);
         }
     }

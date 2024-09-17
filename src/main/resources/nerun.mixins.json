@@ -13,14 +13,7 @@
     "entity.player.ServerPlayerMixin",
     "item.ItemArmorMixin",
     "item.ItemArrowMixin",
-    "item.ItemBowMixin",
-    "item.ItemCoinMixin",
-    "item.ItemFishingRodMixin",
-    "item.ItemMixin",
-    "item.ItemNuggetMixin",
-    "item.ItemToolMixin",
     "network.Packet100OpenWindowMixin",
-    "render.RenderArrowMixin",
     "world.ChunkProviderHellMixin"
   ]
 }

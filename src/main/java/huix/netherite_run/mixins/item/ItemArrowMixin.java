@@ -1,6 +1,5 @@
 package huix.netherite_run.mixins.item;
 
-import huix.netherite_run.game_objects.item.NetheriteRunItem;
 import huix.netherite_run.game_objects.material.NetheriteRunMaterial;
 import net.minecraft.ItemArrow;
 import net.minecraft.Material;
@@ -14,12 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin( ItemArrow.class )
 public class ItemArrowMixin {
 
-    @Inject(method = "getChanceOfRecovery",at = @At("HEAD"), cancellable = true)
-    private void injectGetChanceOfRecovery(CallbackInfoReturnable<Float> cir){
-        if (ReflectHelper.dyCast(this) == NetheriteRunItem.netherite_arrow) {
-            cir.setReturnValue(1.0F);
-        }
-    }
 
     @Shadow
     @Final

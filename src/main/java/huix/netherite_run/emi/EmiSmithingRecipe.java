@@ -1,14 +1,14 @@
 package huix.netherite_run.emi;
 
 import com.google.common.collect.Lists;
-import emi.dev.emi.emi.EmiPort;
-import emi.dev.emi.emi.api.recipe.EmiRecipe;
-import emi.dev.emi.emi.api.recipe.EmiRecipeCategory;
-import emi.dev.emi.emi.api.stack.EmiIngredient;
-import emi.dev.emi.emi.api.stack.EmiStack;
-import emi.dev.emi.emi.api.widget.WidgetHolder;
-import emi.shims.java.com.unascribed.retroemi.RetroEMI;
-import emi.shims.java.net.minecraft.client.gui.tooltip.TooltipComponent;
+import dev.emi.emi.EmiPort;
+import dev.emi.emi.api.recipe.EmiRecipe;
+import dev.emi.emi.api.recipe.EmiRecipeCategory;
+import dev.emi.emi.api.stack.EmiIngredient;
+import dev.emi.emi.api.stack.EmiStack;
+import dev.emi.emi.api.widget.WidgetHolder;
+import shims.java.com.unascribed.retroemi.RetroEMI;
+import shims.java.net.minecraft.client.gui.tooltip.TooltipComponent;
 import huix.netherite_run.init.EMIInit;
 import net.minecraft.ItemStack;
 import net.minecraft.ResourceLocation;

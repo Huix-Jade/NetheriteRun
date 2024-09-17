@@ -28,11 +28,12 @@ dependencies {
 	mappings loom.fmlMCPMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// FishModLoader API. And I probably want it anyway.
+	implementation files("libs\\Glacier-0.1.2.jar")
+
 	implementation files(loom.getFML().toPath())
 	implementation files("libs\\fastutil-8.5.12.jar")
+	implementation files("libs\\EMI-1.0.6.jar")
 	implementation files("libs\\PinIn-Lib-1.6.0.jar")
-	implementation files("libs\\EMI-1.0.2.jar")
 }
 
 processResources {

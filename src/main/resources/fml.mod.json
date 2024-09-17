@@ -6,7 +6,7 @@
   "description": "Netherite respawn!",
   "authors": ["Huix"],
   "entrypoints": {
-    "preLaunch": ["huix.netherite_run.init.PreInit"],
+    "registry": ["huix.netherite_run.init.RegistryInit"],
     "main": ["huix.netherite_run.init.PostInit"],
     "emi": ["huix.netherite_run.init.EMIInit"]
   },

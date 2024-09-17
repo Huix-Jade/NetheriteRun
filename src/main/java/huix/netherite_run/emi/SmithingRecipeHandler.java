@@ -1,8 +1,8 @@
 package huix.netherite_run.emi;
 
 import com.google.common.collect.Lists;
-import emi.dev.emi.emi.api.recipe.EmiRecipe;
-import emi.dev.emi.emi.api.recipe.handler.StandardRecipeHandler;
+import dev.emi.emi.api.recipe.EmiRecipe;
+import dev.emi.emi.api.recipe.handler.StandardRecipeHandler;
 import huix.netherite_run.game_objects.inventory.container.SmithingTableContainer;
 import huix.netherite_run.init.EMIInit;
 import net.minecraft.ContainerWorkbench;
